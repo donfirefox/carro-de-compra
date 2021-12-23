@@ -11,15 +11,21 @@ const styles = {
     justifyContent: "space-between",
     position: "relative",
     padding: "0 50px",
-    boxShadow: "0 2px 3px rbg(0,0,0,0.1)",
+    boxShadow: '0 2px 3px rbg(0,0,0,0.1)',
   },
 };
 class Navbar extends Component {
+  
   render() {
+    const {carro,esCarroVisible,mostrarCarro} = this.props
     return (
       <nav style={styles.navbar}>
         <Logo />
-        <Carro />
+        <Carro
+          carro={carro}
+          esCarroVisible={esCarroVisible}
+          mostrarCarro={mostrarCarro}
+        />
       </nav>
     );
   }
